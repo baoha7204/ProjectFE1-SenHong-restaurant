@@ -1,0 +1,186 @@
+/* ---Store locator---*/
+.header-text {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    position: relative;
+    color: #ff6b6b;
+    margin: 10rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 50rem;
+    margin-bottom: 10rem;
+}
+
+.map-container {
+    width: 80rem;
+    height: 50rem;
+    border: 0.0625rem solid #ccc;
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    /* Đặt phần tìm kiếm là phần tĩnh */
+    padding: 3rem;
+    /* Tạo khoảng cách giữa các phần */
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    height: 50rem;
+    width: 40rem;
+    /* Điều chỉnh chiều rộng của phần */
+}
+
+#region-select,
+#province-select {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+.select-titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    /* Khoảng cách với ô chọn */
+    font-size: 2rem;
+    color: #888;
+    /* Màu chữ */
+}
+
+#region-select {
+    margin-bottom: 1rem;
+}
+
+#province-select {
+    margin-bottom: 1rem;
+}
+
+#search-button {
+    padding: 0.5rem 1rem;
+    background-color: #ff6b6b;
+    height: 15rem;
+    width: 23rem;
+    color: white;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+#search-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 300%;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: skewX(45deg);
+    transition: left 0.2s;
+    z-index: -1;
+}
+
+#search-button:hover {
+    background-color: #ff8a8a;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#search-button:hover::before {
+    left: 50%;
+}
+
+.restaurant-list {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+.restaurant-list h3 {
+    font-size: 2rem;
+    /* Kích thước font chữ cho tiêu đề */
+    margin-bottom: 1rem;
+    /* Khoảng cách dưới tiêu đề */
+}
+
+.restaurant-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.restaurant-list li {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s, border 0.2s;
+    /* Thêm hiệu ứng chuyển đổi màu chữ và border */
+    border: 0.5px solid transparent;
+    /* Khởi tạo border trong suốt ban đầu */
+    padding: 0.5rem;
+    /* Thêm khoảng cách xung quanh nội dung */
+}
+
+.restaurant-list li:hover {
+    color: #ff6b6b;
+    cursor: pointer;
+    border: 1px solid #ff6b6b;
+    /* Thay đổi border khi hover */
+    background-color: rgba(255, 107, 107, 0.1);
+    /* Thêm màu nền khi hover */
+}
+
+/* ----- Responsive for mobile devices ----- */
+@media (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .header-text {
+        font-size: 2rem;
+    }
+
+    .search-bar {
+        height: 40rem;
+        margin-top: 5rem;
+    }
+
+    .map-container {
+        height: 40rem;
+        width: 40rem;
+    }
+}
+
+/* ----- Responsive for tablet devices ----- */
+@media (min-width: 481px) and (max-width: 768px) {}
+
+/* ----- Responsive for PC devices ----- */
+@media (min-width: 769px) and (max-width: 1078px) {}
+
+/* ---End store locator---*/

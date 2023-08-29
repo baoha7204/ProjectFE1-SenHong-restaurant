@@ -32,13 +32,13 @@ function insertHeader() {
                 <a href="#" class="item--introduction" title="Giới thiệu">Giới thiệu</a>
             </li>
             <li class="list__item mobile-list__item--active">
-                <a href="#" class="item--menu" title="Thực đơn">Thực đơn</a>
+                <a href="menu.html" class="item--menu" title="Thực đơn">Thực đơn</a>
             </li>
             <li class="list__item">
                 <a href="#" class="item--booking" title="Đặt bàn">Đặt bàn</a>
             </li>
             <li class="list__item">
-                <a href="#" class="item--store-locator" title="Hệ thống">Hệ thống</a>
+                <a href="store_locator.html" class="item--store-locator" title="Hệ thống">Hệ thống</a>
             </li>
         </nav>
     </div>

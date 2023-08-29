@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ thống cửa hàng</title>
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/store_locator.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header></header>
+
+    <div class="header-text">
+        <h3>Tìm nhà hàng Sen Hồng gần bạn</h3>
+    </div>
+
+    <div class="container">
+        <div class="search-bar">
+            <select id="region-select">
+                <option value="" selected disabled hidden>Chọn vùng </option>
+                <option value="north">Hà Nội</option>
+                <option value="south">TP Hồ Chí Minh</option>
+            </select>
+            <select id="province-select">
+                <option value="" selected disabled hidden>Chọn quận/huyện </option>
+                <option value="q1">Quận 1</option>
+                <option value="q2">Quận 2</option>
+                <option value="q9">Quận 9</option>
+                <option value="td">Thủ Đức</option>
+                <option value="bd">Ba Đình</option>
+                <option value="da">Đông Anh</option>
+                <option value="hn">Đống Đa</option>
+            </select>
+            <button id="search-button">Tìm nhà hàng gần bạn</button>
+
+            <div class="restaurant-list">
+                <h3>Danh sách nhà hàng chi nhánh</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Số 123, Đường Nguyễn Huệ, Phường Bến Nghé, Thành phố Hồ
+                        Chí Minh</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Số 456, Đường Thảo Điền, Phường Thảo Điền, Thành phố Hồ
+                        Chí Minh</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Số 789, Đường Hoàng Diệu, Phường Long Bình, Thành phố Hồ
+                        Chí Minh</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Số 101, Đường Võ Văn Ngân, Phường Linh Chiểu, Thành phố Hồ
+                        Chí Minh</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Số 222, Đường Hoàng Hoa Thám, Phường Quán Thánh, Hà Nội
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> Số 333, Đường Nguyễn Trãi, Phường Đông Anh, Hà Nội</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Số 444, Đường Thái Hà, Phường Trung Liệt, Hà Nội</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6099415311037!2d106.80730271145954!3d10.841132857950553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752731176b07b1%3A0xb752b24b379bae5e!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBGUFQgVFAuIEhDTQ!5e0!3m2!1svi!2s!4v1692798192434!5m2!1svi!2s"
+                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="./assets/base.js"></script>
+</body>
+
+</html>
