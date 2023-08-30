@@ -1,0 +1,286 @@
+html{
+    background-color: #ECE2E2;
+}
+
+body{
+    font-size: 20px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.banner{
+    padding-top: 250px;
+    min-height: 450px;
+    width: 100%;
+    background-image: url('./img/Banner.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.intro{
+    width: 1170px;
+    height: 652px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+}
+
+.intro-text1{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    position: absolute;
+    top: 30%;
+}
+
+.card-img img{
+    width: 320px;
+    height: 320px;
+}
+
+.card-content{
+    background-color: #AACB73;
+    text-align: justify;
+}
+
+.card-content-box{
+    position: relative;
+}
+
+.card-content-box p{
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: 300;
+    width: 60%;
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    padding-top: 35px;
+}
+
+.card-content-box a{
+    display: flex;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    padding-top: 225px;
+    text-decoration: none;
+}
+
+.card-content-box a button{
+    width: 150px;
+    height:  40px;
+    border-radius: 100px;
+    border: none;
+    background-color: #FF9B9B;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-content-box a button:hover{
+    opacity: 0.8;
+    background-color: orange;
+}
+
+.menutc{
+    width: 1170px;
+    height: 730px;
+    background-color: #AACB73;
+    margin: 20px auto;
+    position: relative;
+}
+
+.menutc-title{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.menutc-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 50px;
+    position: absolute;
+    margin-top: 16%;
+    margin-left: 100px;
+}
+
+.menutc-card{
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px #5C8374;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.menutc-card-img img{
+    width: 100%;
+    min-height: 140px;
+}
+
+.menutc-card-name{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.menutc-card-money{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.menutc-card:hover{
+    color: #5C8374;
+    background-color: #FF9B9B;
+    width: 70%;
+}
+
+.menutc-cards a{
+    display: flex;
+    position: absolute;
+    left: 38%;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+.menutc-cards a button{
+    width: 150px;
+    height:  40px;
+    border-radius: 100px;
+    border: none;
+    background-color: #FF9B9B;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+}
+
+.menutc-cards a button:hover{
+    opacity: 0.8;
+    background-color: orange;
+}
+
+.systemtc{
+    width: 1170px;
+    height: 730px;
+    background-color: white;
+    margin: 20px auto;
+    position: relative;
+}
+
+.systemtc h1{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.systemtc-content{
+    overflow: hidden;
+}
+
+.systemtc-content img{
+   width: 85%;
+   position: absolute;
+   top: 25%;
+   left: 7%;
+   border-radius: 20px;
+   transition: all 1s ease-in-out;
+}
+
+.systemtc-content a{
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 37%;
+    margin-top: 365px;
+    text-decoration: none;
+}
+
+.systemtc-content a button{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: #FF9B9B;
+    font-weight: 800;
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    transition:all 0.8s ease-in-out;
+}
+
+.systemtc-content:hover img{
+    opacity: 0.6;
+}
+
+.systemtc-content:hover a button{
+    opacity: 1;
+}
+
+.systemtc-content a button:hover{
+    color: black;
+    font-weight: 800;
+}
+
+/* ----- Responsive for mobile devices ----- */
+@media (max-width: 480px) {
+	.intro, .menutc, .systemtc{
+		width: 100%;
+	}
+
+	.intro-text1{
+		font-size: 100%;
+		width: 100%;
+		text-align: center;
+	}
+
+	.card{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 2%;
+	}
+
+	.card-content{
+		grid-row: 1/3;
+		width: 100%;
+	}
+
+	.card-img img{
+		width: 100%;
+		height: 100%;
+	}
+
+	.card-content-box p{
+		font-size: 55%;
+	}
+}
+
+/* ----- Responsive for tablet devices ----- */
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/* ----- Responsive for PC devices ----- */
+@media (min-width: 769px) and (max-width: 1078px) {
+}

@@ -21,7 +21,7 @@ function insertFontAwesome(){
 function insertHeader() {
     header.innerHTML = `<div class="header__container">
     <!-- Logo -->
-    <div class="logo"><a href="#"></a></div>
+    <div class="logo"><a href="index.html"></a></div>
     <!-- Navigation bar -->
     <div class="header__navbar">
         <label for="checkbox_toggle" class="navbar__hamburger">
@@ -29,13 +29,16 @@ function insertHeader() {
         </label>
         <nav class="navbar__list">
             <li class="list__item">
-                <a href="#" class="item--introduction" title="Giới thiệu">Giới thiệu</a>
+                <a href="index.html" class="item--index" title="Trang chủ">Trang chủ</a>
             </li>
-            <li class="list__item mobile-list__item--active">
+            <li class="list__item">
+                <a href="introduction.html" class="item--introduction" title="Giới thiệu">Giới thiệu</a>
+            </li>
+            <li class="list__item">
                 <a href="menu.html" class="item--menu" title="Thực đơn">Thực đơn</a>
             </li>
             <li class="list__item">
-                <a href="#" class="item--booking" title="Đặt bàn">Đặt bàn</a>
+                <a href="order.html" class="item--order" title="Đặt bàn">Đặt bàn</a>
             </li>
             <li class="list__item">
                 <a href="store_locator.html" class="item--store-locator" title="Hệ thống">Hệ thống</a>
@@ -50,7 +53,7 @@ function insertHeader() {
 function insertFooter() {
     footer.innerHTML = `<div class="footer__container">
     <div class="footer__upper">
-        <div class="logo"><a href="#"></a></div>
+        <div class="logo"><a href="index.html"></a></div>
         <div class="footer__card upper__item">
             <div class="upper-item__title">
                 <h4>trụ sở chính</h4>
@@ -114,6 +117,29 @@ function preventScrollingSidebar() {
     }
 }
 
+/**
+ * Set active html page
+ */
+function setActiveHtml(){
+    // detect active html
+    var path = window.location.pathname;
+    var activePage = path.split("/").pop().split(".html").shift();
+    var activePageIndex = null;
+    // remove active page
+    var pages = $$('.list__item a');
+    var pagesItem = $$('.list__item');
+    pages.forEach((page, index) => {
+        var namePage = page.classList.value.split("item--").pop();
+        // Check active page
+        if(namePage.match(activePage)){
+            activePageIndex = index;
+        } else{
+            pagesItem[index].classList.remove('mobile-list__item--active');
+        }
+    });
+    pagesItem[activePageIndex].classList.add("mobile-list__item--active");
+}
+
 function myWebApp() {
     // fontAwesome
     insertFontAwesome();
@@ -121,7 +147,7 @@ function myWebApp() {
     insertHeader();
     styleHeaderMoving();
     preventScrollingSidebar();
-
+    setActiveHtml();
     // footer
     insertFooter();
 }

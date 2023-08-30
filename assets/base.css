@@ -177,6 +177,10 @@ header{
 	transition: ease 1s;
 }
 
+.list__item:has( .item--index){
+	display: none;
+}
+
 /* Header when start moving from top */
 .header__container--moving{
 	background: var(--header-moving);
@@ -201,6 +205,9 @@ header{
 
 /* ----- Responsive hamburger menu for tablet and mobile devices ----- */
 @media (max-width: 768px) {
+	.list__item:has( .item--index){
+		display: block;
+	}
 	.header__container{
 		background: transparent;
 	}
