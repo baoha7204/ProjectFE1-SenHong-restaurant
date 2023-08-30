@@ -2,29 +2,22 @@ html{
     background-color: #ECE2E2;
 }
 
-body{
-    font-size: 20px;
-}
-
 .banner{
     padding-top: 250px;
     min-height: 450px;
     width: 100%;
-    background-image: url(IMG/table.jpg);
+    background-image: url('img/table.jpg');
     background-position: center;
     background-size: cover;
-    position: relative;
 }
 
 .orderbox{
-    width: 1170px;
-    height: 730px;
+    min-height: 730px;
     background-color: white;
-    margin: 50px auto;
-    position: relative;
+    margin: 50px 5%;
     border-radius: 20px;
-    grid-template-columns: 50% 50%;
     display: flex;
+	overflow: hidden;
 }
 
 .title{
@@ -34,39 +27,59 @@ body{
 }
 
 .orderbox-img{
-    width: 50%;
+    flex: 1;
     display: flex;
-    position: relative;
-    margin-left: 50%;
-    position: absolute;
-}
-
-.orderbox-img img{
-    width: 100%;
-    height: 730px;
-    border-radius: 20px;
-    position: absolute; 
+    background-image: url('img/TY.png');
+	background-position: center;
+    background-size: cover;
 }
 
 .orderbox-form{
-    width: 50%;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 .orderbox-form .note{
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     text-align: center;
     padding-top: 30px;
     font-weight: 600;
 }
 
+table{
+	padding: 0 5%;
+	width: 100%;
+}
+
+tbody{
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+
+form table tr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form table :is(tr:nth-of-type(1), tr:nth-of-type(3), tr:nth-of-type(4), tr:nth-of-type(5), tr:nth-of-type(7)) td{
+	width: 100%;
+}
+
+form table tr:nth-of-type(2) td{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 form input{
     height: 50px;
     border-radius: 100px;
-    margin-top: 20px;
     padding-left: 20px;
-    display: flex;
-    margin-left: 70px;
     border-color: #D9D9D9;
 }
 
@@ -75,91 +88,60 @@ form input::placeholder{
 }
 
 form .gname{
-   width: 430px;
-}
-
-form .gphone{
-    width: 200px;
-}
-
-form .gemail{
-    width: 200px;
-    position: absolute;
-    left: 19.8%;
-    top: 17.3%;
+   	width: 100%;
 }
 
 .choose{
-    font-size: 1.6rem;
-    position: absolute;
+	text-align: center;
+    font-size: 2rem;
     font-weight: 500;
-    top: 30%;
-    left: 18%;
 }
 
-.text1{
-    margin-top: 80px;
+.text1, .text2{
     display: flex;
-    margin-left: 120px;
     font-size: 1.5rem;
+	align-items: center;
+	justify-content: center;
 }
 
 select{
     height: 50px;
     width: 200px;
     border-radius: 100px;
-    padding-left: 20px;
     border-color: #D9D9D9;
-    position: absolute;
-    left: 25%;
-    top: 36%;
 }
 
-.gbranch{
-    top: 47%;
+td:has( :is(.gplace, .gbranch, .gdate, .gtime)){
+	display: flex;
+    align-items: center;
+	justify-content: center;
 }
 
-.text2{
-    margin-top: 60px;
-    display: flex;
-    margin-left: 120px;
-    font-size: 1.5rem;
+.gplace, .gbranch{
+	padding-left: 20px;
 }
 
-.gsl{
-    width: 430px;
-    margin-top: 35px;
-}
-
-.gdate{
-    width: 200px;
-}
-
-.gtime{
-    width: 200px;
-    position: absolute;
-    left: 19.8%;
-    top: 63.6%;
+.gdate, .gtime{
+    min-width: 200px;
 }
 
 .submit input{
-    width: 200px;
+    min-width: 200px;
     border: 1px solid var(--medium-gray, #D9D9D9);
     background: linear-gradient(180deg, #AACB73 0%, #FF9B9B 100%);
-    margin-top: 30px;
-    margin-left: 180px;
-    color:white ;
+    color:white;
     font-size: 1.6rem;
     font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+	padding: 0;
 }
 
 .end{
-    margin-top: 40px;
-    margin-left: 80px;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 2rem;
 }
 
 .submit input:hover{
@@ -169,82 +151,42 @@ select{
 
 /* ----- Responsive for mobile devices ----- */
 @media (max-width: 480px) {
+	body{
+		background-image: url('img/table.jpg');
+		background-position: center;
+    	background-size: cover;
+	}
+	.banner {
+		display: none;
+	}
+	.title{
+		color: #ECE2E2;
+		font-size: 3rem;
+	}
 	.orderbox-img{
 		display: none;
 	}
 
-	.orderbox{
-		width: 100%;
-		height: 900px;
-	}
-
 	.orderbox-form .note{
-		width: 480px;
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 	}
 
-	form input{
-		height: 50px;
-		margin-left: 20%;
-	}
-
-	form .gname{
-		width: 300px;
-	}
-
-	form .gemail{
-		left: -6.5%;
-		top: 21%;
-	}
-
-	.choose{
-		font-size: 1.6rem;
-		left: 10%;
-	}
-
-	.text1{
-		margin-left: 70px;
-		margin-top: 110px;
-	}
-
-	.text2{
-		margin-left: 70px;
-		margin-top: 50px;
+	tr:nth-of-type(7), tr:nth-of-type(2){
+		flex-direction: column;
+		gap: 2rem;
 	}
 
 	select{
-		top: 36%;
-		left: 45%;
-	}
-
-	.gbranch{
-		top: 45%;
-	}
-	
-	form .gsl{
-		width: 300px;
-		margin-top: 90px;
-	}
-
-	form .gtime{
-		left: -6.5%;
-		top: 67%;
-	}
-
-	.submit input{
-		position: absolute;
-		margin: 0;
-		top: 80%;
-		left: 30%;
+		width: 150px;
 	}
 
 	.end{
 		font-size: 2rem;
-		width: 480px;
-		margin-top: 200px;
-		margin-left: 60px;
 	}
 
+	.choose{
+		font-size: 1.6rem;
+	}
 }
 
 /* ----- Responsive for tablet devices ----- */
@@ -252,62 +194,31 @@ select{
 	.orderbox-img{
 		display: none;
 	}
-
-	.orderbox{
-		width: 100%;
+	.title{
+		color: #ECE2E2;
+		font-size: 3rem;
 	}
-
-	.orderbox-form .note{
-		width: 768px;
+	.banner {
+		display: none;
 	}
-
-	form input{
-		height: 60px;
-		margin-left: 40%;
-	}
-
-	.choose{
-		left: 42%;
-		padding-top: 15px;
-	}
-
-	form .gemail{
-		top: 18.5%;
-		left: 14%;
-	}
-
-	select{
-		top: 38%;
-		left: 50%;
-	}
-
-	.text1{
-		margin-left: 230px;
-		margin-top: 75px;
-	}
-
-	.text2{
-		margin-left: 230px;
-		margin-top: 45px;
-	}
-
-	.gtime{
-		top: 64.7%;
-		left: 14%;
-	}
-
-	.submit input{
-		position: absolute;
-		left: 14%;
-	}
-
-	.end{
-		width: 768px;
-		margin-top: 120px;
-		margin-left: 180px;
+	body{
+		background-image: url('img/table.jpg');
+		background-position: center;
+    	background-size: cover;
 	}
 }
 
 /* ----- Responsive for PC devices ----- */
 @media (min-width: 769px) and (max-width: 1078px) {
+	table{
+		padding: 0;
+	}
+
+	.orderbox-form{
+		flex: 5;
+	}
+
+	.orderbox-img{
+		flex: 2;
+	}
 }
