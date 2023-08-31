@@ -43,7 +43,7 @@ function centerSideNavigation() {
 /**
  * Add option for select tags
  */
-const tagsAPI = 'http://localhost:3000/options';
+const tagsAPI = 'https://64f0a8278a8b66ecf779fa3f.mockapi.io/tags';
 const selectTags = $('#tags');
 const listTags = $('.side-navigation__list');
 async function getApi() {
