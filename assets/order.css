@@ -23,7 +23,7 @@ html{
 .title{
     text-align: center;
     margin-top: 50px;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .orderbox-img{
@@ -161,7 +161,7 @@ td:has( :is(.gplace, .gbranch, .gdate, .gtime)){
 	}
 	.title{
 		color: #ECE2E2;
-		font-size: 3rem;
+		font-size: 1.5rem;
 	}
 	.orderbox-img{
 		display: none;
@@ -196,7 +196,7 @@ td:has( :is(.gplace, .gbranch, .gdate, .gtime)){
 	}
 	.title{
 		color: #ECE2E2;
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 	.banner {
 		display: none;
